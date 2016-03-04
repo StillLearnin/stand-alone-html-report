@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="nv.d3.min.css" rel="stylesheet" type="text/css">
+    <script src="d3.min.js" charset="utf-8"></script>
+    <script src="nv.d3.min.js"></script>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body class='with-3d-shadow with-transitions'>
+    <div class="day">
+        <div class="day-header">
+            <div id="title"></div>
+        </div>
+        <div class="day-body">
+            <div class="pane">
+                <div id="chartPaneHeader" class="pane-header">
+                    <div id="chartPaneTitle1" class="pane-title1"></div>
+                    <div id="chartPaneTitle2" class="pane-title2"></div>
+                </div>
+                <svg id="pieChart"></svg>
+                <div class="time-detail summary" >
+                    <table id="bilCodeSummary"></table>
+                </div>
+                <div class="time-detail summary" >
+                    <table id="billCodesByGroup"></table>
+                </div>
+           </div>
+            <div class="pane">
+                <div class="time-detail" >
+                    <table id="timeDetails" >
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="day">
+        <div class="day-header">
+        </div>
+        <div class="day-body">
+            <div class="pane">
+                <div class="time-detail" >
+                    <table >
+                        <tr>
+                            <td>Bill Code</td>
+                            <td>Description</td>
+                            <td>Hours</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>Misc. Time </td>
+                            <td>2.34</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="pane chart-pane">
+            </div>
+        </div>
+        <div class="day-footer">
+            <div class="chart-pane">
+                <svg id="chart1"></svg>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</footer>
+</html>

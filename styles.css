@@ -72,21 +72,45 @@ svg[id^=barChart] {
     height: 450px;
 }
 
+div[id^=timeDetailsStatus] {
+    text-align: center;
+    width: 90%;
+    margin-bottom: 2em;
+    background-color: #6BBC6B;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+div[id^=timeDetailsStatus].status-warning {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+table[id^=timeDetails] {
+    width: 100%;
+}
+
 .summary > table {
     width: 350px;
 }
 
+.time-log {
+    width: 90%;
+}
+
 .time-detail {
-    margin:0px;
     margin-bottom: 2em;
+    margin-top: 0;
     padding:0px;
     border:1px solid #000000;
-
-}.time-detail table{
+}
+.time-detail table{
     border-collapse: collapse;
     border-spacing: 0;
     margin:0px;padding:0px;
-}.time-detail tr:hover td{
+}
+.time-detail tr:hover td{
     background-color: #EAEAEA;
 }
 .time-detail td{

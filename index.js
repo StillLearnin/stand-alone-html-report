@@ -84,7 +84,9 @@ var d = document.createElement("div");
             + "</div>"
         + "</div>"
         + "<div class='pane'>"
-            + "<div class='time-detail' >"
+            + "<div id='timeDetailsStatus" + page + "' >"
+            + "</div>"
+            + "<div class='time-detail time-log' >"
                 + "<table id='timeDetails" + page + "' >"
                 + "</table>"
             + "</div>"
@@ -122,12 +124,13 @@ var d = document.createElement("div");
         row = timeDetails.insertRow(i + 1);
 
         cell1 = row.insertCell(0);
+        cell1.style = "width: 60px;"
         cell2 = row.insertCell(1);
-        cell2.style = "text-align: center;"
+        cell2.style = "text-align: center; width: 40px;"
         cell3 = row.insertCell(2);
-        cell3.style = "text-align: right;"
+        cell3.style = "text-align: right; width: 20px;"
         cell4 = row.insertCell(3);
-        cell4.style = "text-align: center;"
+        cell4.style = "text-align: center; width: 20px;"
         cell5 = row.insertCell(4);
 
         // Add some text to the new cells:
@@ -136,6 +139,15 @@ var d = document.createElement("div");
         cell3.innerHTML = data.clockPunches[i].hours;
         cell4.innerHTML = data.clockPunches[i].billCode;
         cell5.innerHTML = data.clockPunches[i].description;
+    }
+    var status = document.getElementById("timeDetailsStatus" + page);
+    if (data.missingEndOfDayPunch && data.missingEndOfDayPunch === true) {
+        status.innerHTML = "Missing End of Day Punch";
+        status.className = "status-warning"
+    }
+    else{
+        status.innerHTML = "Found End of Day Punch";
+        status.className = "status-good"
     }
 };
 

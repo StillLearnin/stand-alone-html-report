@@ -1,30 +1,7 @@
-var newDate = function(d) {
-    return  new Date(d).getTime();
-}
-
-var data = [
-    {
-        "key" : "Misc." ,
-        "values" : [ [ newDate("2016-2-22"), 3], [ newDate("2016-2-23") , 4], [ newDate("2016-2-24") , 2], [ newDate("2016-2-25") , 3], [ newDate("2016-2-26") , .5] ]
-    },
-    {
-        "key" : "Food/Fellowship" ,
-        "values" : [ [ newDate("2016-2-22"), 1], [ newDate("2016-2-23") , .5], [ newDate("2016-2-24") , 2], [ newDate("2016-2-25") , 1.25], [ newDate("2016-2-26") , .75] ]
-    },
-    {
-        "key" : "Programming" ,
-        "values" : [ [ newDate("2016-2-22"), 3], [ newDate("2016-2-23") , 4], [ newDate("2016-2-24") , 2], [ newDate("2016-2-25") , 3], [ newDate("2016-2-26") , .5] ]
-    },
-    {
-        "key" : "Development" ,
-        "values" : [ [ newDate("2016-2-22"), 2], [ newDate("2016-2-23") , 0], [ newDate("2016-2-24") , 2], [ newDate("2016-2-25") , 1], [ newDate("2016-2-26") , 5.5] ]
-    }
-];
-
 var days = [
 {
     employee: "Melvin Ray Herr",
-    day: "2016-02-29",
+    day: "2016-2-29",
     clockPunches: [
         { time: "09:18:08 AM", type: "f", hours: 1.70, billCode: "P", description: ".968216 *IP* (PRODAS0) Programming in March" },
         { time: "11:00:03 AM", type: "f", hours: 0.65, billCode: "M", description: "* Misc. Time" },
@@ -58,7 +35,7 @@ var days = [
 ,
 {
     employee: "Melvin Ray Herr",
-    day: "2016-03-01",
+    day: "2016-3-1",
     clockPunches: [
         { time: "10:00:18 AM", type: "p", hours: 0.01, billCode: "G", description: "* (KR) Karen Rissler" },
         { time: "10:03:42 AM", type: "p", hours: 0.52, billCode: "N", description: ".968147 *IP* (EMYLL 0) Troubleshoot" },
@@ -104,7 +81,7 @@ var days = [
 ,
 {
     employee: "Melvin Ray Herr",
-    day: "2016-03-02",
+    day: "2016-3-2",
     clockPunches: [
         { time: "02:16:33 PM", type: "f", hours: 2.89, billCode: "P", description: ".968216 *IP* (PRODAS0) Programming in March" },
         { time: "05:09:59 PM", type: "f", hours: 0.20, billCode: "D", description: "* Done Working" },
@@ -129,7 +106,7 @@ var days = [
 ,
 {
     employee: "Melvin Ray Herr",
-    day: "2016-03-03",
+    day: "2016-3-3",
     clockPunches: [
         { time: "10:31:33 AM", type: "p", hours: 1.31, billCode: "P", description: ".968245 *WC* (ZEIEQ 0) " },
         { time: "12:05:00 PM", type: "f", hours: 0.56, billCode: "F", description: "* Food/Fellowship" },
@@ -172,7 +149,7 @@ var days = [
 ,
 {
     employee: "Melvin Ray Herr",
-    day: "2016-03-04",
+    day: "2016-3-4",
     clockPunches: [
         { time: "00:28:53 AM", type: "f", hours: 0.60, billCode: "M", description: "* Misc. Time" },
         { time: "01:04:51 AM", type: "f", hours: 7.91, billCode: "D", description: "* Done Working" },
@@ -203,10 +180,9 @@ var days = [
             total: 6.01
         }
     }
-}];
+}
+];
 var grandTotals = {
-    startDay: "2016-02-28",
-    endDay: "2016-03-05",
     billCodeTotals: {
         byBillCode: {
             details: [

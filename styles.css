@@ -39,7 +39,9 @@ html, body {
 }
 
 .pane-header {
-    background: #A5DCEF;
+    background: #C6D8EF;
+    box-shadow: #747677 5px 6px 6px;
+    font-family: Arial;
     font-weight: bold;
     font-size: 28px;
     width: 100%;
@@ -63,11 +65,15 @@ html, body {
 }
 
 svg[id^=pieChart] {
-    height: 400px;
+    height: 450px;
+}
+
+svg[id^=barChart] {
+    height: 450px;
 }
 
 .summary > table {
-    width: 450px;
+    width: 350px;
 }
 
 .time-detail {

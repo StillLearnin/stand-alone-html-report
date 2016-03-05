@@ -1,6 +1,4 @@
-var page = 1;
-
-var createDay = function () {
+var createDay = function (page, data) {
 var d = document.createElement("div");
     d.className = "day";
     d.innerHTML = "<div class='day-header'>"
@@ -32,7 +30,6 @@ var d = document.createElement("div");
     var b = document.getElementById("body");
     b.appendChild(d);
 
-
     var chart1;
     var name = "#pieChart" + page;
     nv.addGraph(function() {
@@ -43,18 +40,18 @@ var d = document.createElement("div");
             .padAngle(.08)
             .cornerRadius(5)
             .id("donut1" + page); // allow custom CSS for this one svg
-        chart1.title(timeData.billCodeTotals.byBillCode.total + " Hrs.");
+        chart1.title(data.billCodeTotals.byBillCode.total + " Hrs.");
         chart1.pie.labelsOutside(true).donut(true);
         d3.select(name)
-            .datum(timeData.billCodeTotals.byBillCode.details)
+            .datum(data.billCodeTotals.byBillCode.details)
             .transition().duration(1200)
             .call(chart1);
         //nv.utils.windowResize(chart1.update);
         return chart1;
     });
 
-    document.getElementById("chartPaneTitle1" + page).innerHTML = timeData.day + " Timecard for:";
-    document.getElementById("chartPaneTitle2" + page).innerHTML = timeData.employee;
+    document.getElementById("chartPaneTitle1" + page).innerHTML = data.day + " Timecard for:";
+    document.getElementById("chartPaneTitle2" + page).innerHTML = data.employee;
 
     var timeDetails = document.getElementById("timeDetails" + page);
     // Create an empty <tr> element and add it to the 1st position of the table:
@@ -74,7 +71,7 @@ var d = document.createElement("div");
     cell4.innerHTML = "B/Code";
     cell5.innerHTML = "Description";
 
-    for (i = 0; i < timeData.clockPunches.length; i++) {
+    for (i = 0; i < data.clockPunches.length; i++) {
         row = timeDetails.insertRow(i + 1);
 
         cell1 = row.insertCell(0);
@@ -87,11 +84,11 @@ var d = document.createElement("div");
         cell5 = row.insertCell(4);
 
         // Add some text to the new cells:
-        cell1.innerHTML = timeData.clockPunches[i].time;
-        cell2.innerHTML = timeData.clockPunches[i].type;
-        cell3.innerHTML = timeData.clockPunches[i].hours;
-        cell4.innerHTML = timeData.clockPunches[i].billCode;
-        cell5.innerHTML = timeData.clockPunches[i].description;
+        cell1.innerHTML = data.clockPunches[i].time;
+        cell2.innerHTML = data.clockPunches[i].type;
+        cell3.innerHTML = data.clockPunches[i].hours;
+        cell4.innerHTML = data.clockPunches[i].billCode;
+        cell5.innerHTML = data.clockPunches[i].description;
     }
 };
 
@@ -137,21 +134,21 @@ var populateBillCodeTotals = function (tableName, header, data, totalDescr) {
 }
 
 
-for (var index = 1; index < 4; index++) {
-    page = index;
-    createDay();
+for (var index = 0; index < days.length; index++) {
+    var page = index;
+    createDay(page, days[index]);
 
     populateBillCodeTotals(
         "bilCodeSummary" + page,
         [ "Bill Code", "Description", "Hours"],
-        timeData.billCodeTotals.byBillCode,
+        days[page].billCodeTotals.byBillCode,
         "Total of all Bill Codes"
     );
 
     populateBillCodeTotals(
         "billCodesByGroup" + page,
         [ "Group", "Description", "Hours"],
-        timeData.billCodeTotals.byGroup,
+        days[page].billCodeTotals.byGroup,
         "Total of all Groups"
     );
 };

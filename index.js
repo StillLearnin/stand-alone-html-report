@@ -234,13 +234,13 @@ function createGrandTotalPage(page, data, days) {
 
     days.forEach(function(day) {
         day.billCodeTotals.byBillCode.details.forEach(function(bc) {
-            pushIfNew({ key: bc.key, description: bc.description, values: []}, billCodes);
+            pushIfNew({ id: bc.key, key: bc.key + " (" + bc.description + ")", values: []}, billCodes);
         }, this);
     }, this);
 
     billCodes.forEach(function(b) {
         days.forEach(function(day) {
-            var dat = day.billCodeTotals.byBillCode.details.filter(function(r){ return r.key === b.key; });
+            var dat = day.billCodeTotals.byBillCode.details.filter(function(r){ return r.key === b.id; });
             b.values.push([ newDate(day.day), dat.length > 0 ? dat[0].hours : 0 ]);
         }, this);
     }, this);

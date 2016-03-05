@@ -15,7 +15,6 @@ var days = [
         { time: "04:46:02 PM", type: "f", hours: 0.57, billCode: "M", description: "* Misc. Time" },
         { time: "05:20:23 PM", type: "f", hours: 40.18, billCode: "D", description: "* Done Working" }
     ],
-    missingEndOfDayPunch: true,
     billCodeTotals: {
         byBillCode: {
             details: [
@@ -126,6 +125,7 @@ var days = [
         { time: "10:27:05 PM", type: "f", hours: 0.17, billCode: "D", description: "* Done Working" },
         { time: "10:37:29 PM", type: "f", hours: 1.59, billCode: "M", description: "* Misc. Time" }
     ],
+    missingEndOfDayPunch: true,
     billCodeTotals: {
         byBillCode: {
             details: [

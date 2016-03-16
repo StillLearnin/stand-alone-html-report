@@ -84,11 +84,11 @@ var d = document.createElement("div");
             + "</div>"
         + "</div>"
         + "<div class='pane'>"
-            + "<div id='timeDetailsStatus" + page + "' >"
-            + "</div>"
             + "<div class='time-detail time-log' >"
                 + "<table id='timeDetails" + page + "' >"
                 + "</table>"
+            + "</div>"
+            + "<div id='timeDetailsStatus" + page + "' >"
             + "</div>"
         + "</div>"
     + "</div>";
@@ -246,26 +246,23 @@ function createGrandTotalPage(page, data, days) {
     }, this);
 
     createBarChart(page, billCodes);
-    // var barData = [];
-    //     {
-    //         "key" : "Misc." ,
-    //         "values" : [ [ newDate("2016-2-22"), 3], [ newDate("2016-2-23") , 4], [ newDate("2016-2-24") , 2], [ newDate("2016-2-25") , 3], [ newDate("2016-2-26") , .5] ]
-    //     },
-    //     {
-    //         "key" : "Food/Fellowship" ,
-    //         "values" : [ [ newDate("2016-2-22"), 1], [ newDate("2016-2-23") , .5], [ newDate("2016-2-24") , 2], [ newDate("2016-2-25") , 1.25], [ newDate("2016-2-26") , .75] ]
-    //     },
-    //     {
-    //         "key" : "Programming" ,
-    //         "values" : [ [ newDate("2016-2-22"), 3], [ newDate("2016-2-23") , 4], [ newDate("2016-2-24") , 2], [ newDate("2016-2-25") , 3], [ newDate("2016-2-26") , .5] ]
-    //     },
-    //     {
-    //         "key" : "Development" ,
-    //         "values" : [ [ newDate("2016-2-22"), 2], [ newDate("2016-2-23") , 0], [ newDate("2016-2-24") , 2], [ newDate("2016-2-25") , 1], [ newDate("2016-2-26") , 5.5] ]
-    //     }
-    // ];
-
 };
+
+createGrandTotalPage(days.length, grandTotals, days)
+
+populateBillCodeTotals(
+    "billCodeSummary" + days.length,
+    [ "Bill Code", "Description", "Hours"],
+    grandTotals.billCodeTotals.byBillCode,
+    "Total of all Bill Codes"
+);
+
+populateBillCodeTotals(
+    "billCodesByGroup" + days.length,
+    [ "Group", "Description", "Hours"],
+    grandTotals.billCodeTotals.byGroup,
+    "Total of all Groups"
+);
 
 for (var index = 0; index < days.length; index++) {
     var page = index;
@@ -286,18 +283,3 @@ for (var index = 0; index < days.length; index++) {
     );
 };
 
-createGrandTotalPage(days.length, grandTotals, days)
-
-populateBillCodeTotals(
-    "billCodeSummary" + days.length,
-    [ "Bill Code", "Description", "Hours"],
-    grandTotals.billCodeTotals.byBillCode,
-    "Total of all Bill Codes"
-);
-
-populateBillCodeTotals(
-    "billCodesByGroup" + days.length,
-    [ "Group", "Description", "Hours"],
-    grandTotals.billCodeTotals.byGroup,
-    "Total of all Groups"
-);

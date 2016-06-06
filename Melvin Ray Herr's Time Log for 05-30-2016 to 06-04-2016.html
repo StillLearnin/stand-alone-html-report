@@ -5,183 +5,158 @@
 var days = [
 {
     employee: "Melvin Ray Herr",
-    day: "2016-5-23",
+    day: "2016-5-30",
     clockPunches: [
-        { time: "07:29:33 AM", type: "f", hours: 0.17, billCode: "M", description: "* Misc. Time" },
-        { time: "07:39:40 AM", type: "f", hours: 11.51, billCode: "D", description: "* Done Working" },
-        { time: "07:10:28 PM", type: "f", hours: 0.09, billCode: "M", description: "* Misc. Time" },
-        { time: "07:15:47 PM", type: "f", hours: 13.89, billCode: "D", description: "* Done Working" }
+        { time: "06:16:48 AM", type: "f", hours: 0.23, billCode: "M", description: "* Misc. Time" },
+        { time: "06:30:15 AM", type: "f", hours: 6.05, billCode: "V", description: "* (.DV725000) Client 5 Fixes" },
+        { time: "08:09:06 AM", type: "p", hours: 0.00, billCode: "M", description: "* Misc. Time" },
+        { time: "09:35:16 AM", type: "p", hours: 0.00, billCode: "M", description: "* Misc. Time" },
+        { time: "12:33:09 PM", type: "f", hours: 0.53, billCode: "M", description: "* Misc. Time" },
+        { time: "01:04:46 PM", type: "f", hours: 3.27, billCode: "P", description: ".967457 *IP* (EMYLL 0) Centralized server control system." },
+        { time: "04:20:55 PM", type: "f", hours: 0.16, billCode: "M", description: "* Misc. Time" },
+        { time: "04:30:19 PM", type: "f", hours: 16.29, billCode: "D", description: "* Done Working" }
     ],
     billCodeTotals: {
         byBillCode: {
             details: [
-                { key: "M", description: "Misc. Time", hours: 0.26 }
+                { key: "M", description: "Misc. Time", hours: 0.92 },
+                { key: "P", description: "Custom Programming", hours: 3.27 },
+                { key: "V", description: "Development Time", hours: 6.05 }
             ],
-            total: 0.26
+            total: 10.24
         },
         byGroup: {
             details: [
-                { key: "ABC", description: "Bill Code Group Total", hours: 0.26 }
+                { key: "ABC", description: "Bill Code Group Total", hours: 10.24 }
             ],
-            total: 0.26
+            total: 10.24
         }
     }
 }
 ,
 {
     employee: "Melvin Ray Herr",
-    day: "2016-5-24",
+    day: "2016-5-31",
     clockPunches: [
-        { time: "09:08:50 AM", type: "f", hours: 0.19, billCode: "M", description: "* Misc. Time" },
-        { time: "09:12:22 AM", type: "p", hours: 0.28, billCode: "G", description: "* (AW) Anthony Witmer" },
-        { time: "09:31:12 AM", type: "p", hours: 1.24, billCode: "V", description: "* (.DV725000) Client 5 Fixes" },
-        { time: "10:45:42 AM", type: "p", hours: 0.01, billCode: "G", description: "* (SB) Shawn Beachy" },
-        { time: "10:51:24 AM", type: "f", hours: 0.67, billCode: "C", description: ".968441 *IP* (EASMEP0) Upgrade to Version 15" },
-        { time: "11:31:28 AM", type: "f", hours: 0.74, billCode: "M", description: "* Misc. Time" },
-        { time: "12:15:59 PM", type: "f", hours: 1.83, billCode: "C", description: ".968441 *IP* (EASMEP0) Upgrade to Version 15" },
-        { time: "02:06:00 PM", type: "f", hours: 0.74, billCode: "N", description: ".968480 Configure Dymo label printer and tweak address printing. Help with 4-18 configuration." },
-        { time: "02:50:11 PM", type: "f", hours: 0.81, billCode: "C", description: ".968441 *IP* (EASMEP0) Upgrade to Version 15" },
-        { time: "03:38:29 PM", type: "f", hours: 0.60, billCode: "M", description: "* Misc. Time" },
-        { time: "04:14:21 PM", type: "f", hours: 1.52, billCode: "P", description: ".968481 *IP* (PRODAS0) Programming in June." },
-        { time: "05:45:47 PM", type: "f", hours: 0.18, billCode: "M", description: "* Misc. Time" },
-        { time: "05:56:42 PM", type: "f", hours: 19.57, billCode: "D", description: "* Done Working" }
+        { time: "08:47:43 AM", type: "f", hours: 0.45, billCode: "M", description: "* Misc. Time" },
+        { time: "09:14:31 AM", type: "f", hours: 0.27, billCode: "P", description: ".968481 *IP* (PRODAS0) Programming in June." },
+        { time: "09:30:44 AM", type: "f", hours: 1.45, billCode: "V", description: "* (.DV725000) Client 5 Fixes" },
+        { time: "10:57:40 AM", type: "f", hours: 0.21, billCode: "M", description: "* Misc. Time" },
+        { time: "11:10:16 AM", type: "f", hours: 5.21, billCode: "P", description: ".968481 *IP* (PRODAS0) Programming in June." },
+        { time: "04:22:57 PM", type: "f", hours: 0.86, billCode: "M", description: "* Misc. Time" },
+        { time: "05:13:26 PM", type: "p", hours: 0.05, billCode: "G", description: "* (SB) Shawn Beachy" },
+        { time: "05:17:21 PM", type: "f", hours: -8.57, billCode: "D", description: "* Done Working" }
     ],
     billCodeTotals: {
         byBillCode: {
             details: [
-                { key: "C", description: "Commission", hours: 3.31 },
-                { key: "G", description: "Give/Get Co-Worker Help", hours: 0.29 },
-                { key: "M", description: "Misc. Time", hours: 1.71 },
-                { key: "N", description: "Billable Time", hours: 0.74 },
-                { key: "P", description: "Custom Programming", hours: 1.52 },
-                { key: "V", description: "Development Time", hours: 1.24 }
+                { key: "G", description: "Give/Get Co-Worker Help", hours: 0.05 },
+                { key: "M", description: "Misc. Time", hours: 1.52 },
+                { key: "P", description: "Custom Programming", hours: 5.48 },
+                { key: "V", description: "Development Time", hours: 1.45 }
             ],
-            total: 8.81
+            total: 8.50
         },
         byGroup: {
             details: [
-                { key: "ABC", description: "Bill Code Group Total", hours: 8.81 }
+                { key: "ABC", description: "Bill Code Group Total", hours: 8.50 }
             ],
-            total: 8.81
+            total: 8.50
         }
     }
 }
 ,
 {
     employee: "Melvin Ray Herr",
-    day: "2016-5-25",
+    day: "2016-6-1",
     clockPunches: [
-        { time: "01:30:46 PM", type: "f", hours: 0.35, billCode: "M", description: "* Misc. Time" },
-        { time: "01:52:00 PM", type: "f", hours: 4.33, billCode: "P", description: ".968481 *IP* (PRODAS0) Programming in June." },
-        { time: "06:12:00 PM", type: "f", hours: 0.54, billCode: "M", description: "* Misc. Time" },
-        { time: "06:44:16 PM", type: "f", hours: 0.92, billCode: "P", description: ".968481 *IP* (PRODAS0) Programming in June." },
-        { time: "07:39:10 PM", type: "f", hours: 1.93, billCode: "V", description: "* (.DV342008) MW Genius Interface" },
-        { time: "09:18:51 PM", type: "p", hours: 0.00, billCode: "M", description: "* Misc. Time" },
-        { time: "09:35:16 PM", type: "f", hours: 0.08, billCode: "M", description: "* Misc. Time" },
-        { time: "09:39:51 PM", type: "f", hours: 1.13, billCode: "V", description: "* (.DV000001) Program Merge" },
-        { time: "10:47:22 PM", type: "f", hours: 0.13, billCode: "D", description: "* Done Working" },
-        { time: "10:55:00 PM", type: "f", hours: 0.08, billCode: "M", description: "* Misc. Time" },
-        { time: "11:00:01 PM", type: "f", hours: 0.47, billCode: "U", description: "* (ABCTIT0) ABC Time Tracking and Reports" },
-        { time: "11:28:18 PM", type: "f", hours: 2.36, billCode: "V", description: "* (.DV000001) Program Merge" }
+        { time: "08:43:24 AM", type: "f", hours: 0.05, billCode: "M", description: "* Misc. Time" },
+        { time: "08:46:03 AM", type: "f", hours: 0.50, billCode: "P", description: ".968481 *IP* (PRODAS0) Programming in June." },
+        { time: "09:15:43 AM", type: "f", hours: 0.23, billCode: "D", description: "* Done Working" },
+        { time: "09:29:14 AM", type: "f", hours: 1.13, billCode: "P", description: ".968481 *IP* (PRODAS0) Programming in June." },
+        { time: "10:36:57 AM", type: "f", hours: 0.11, billCode: "M", description: "* Misc. Time" },
+        { time: "10:43:37 AM", type: "f", hours: 0.88, billCode: "D", description: "* Done Working" },
+        { time: "11:36:26 AM", type: "f", hours: 0.14, billCode: "M", description: "* Misc. Time" },
+        { time: "11:45:00 AM", type: "f", hours: 4.74, billCode: "P", description: ".968481 *IP* (PRODAS0) Programming in June." },
+        { time: "04:29:18 PM", type: "f", hours: 0.10, billCode: "M", description: "* Misc. Time" },
+        { time: "04:35:04 PM", type: "f", hours: 41.16, billCode: "D", description: "* Done Working" }
     ],
-    missingEndOfDayPunch: true,
     billCodeTotals: {
         byBillCode: {
             details: [
-                { key: "M", description: "Misc. Time", hours: 1.05 },
-                { key: "P", description: "Custom Programming", hours: 5.25 },
-                { key: "U", description: "Inhouse Development", hours: 0.47 },
-                { key: "V", description: "Development Time", hours: 5.42 }
+                { key: "M", description: "Misc. Time", hours: 0.40 },
+                { key: "P", description: "Custom Programming", hours: 6.37 }
             ],
-            total: 12.19
+            total: 6.77
         },
         byGroup: {
             details: [
-                { key: "ABC", description: "Bill Code Group Total", hours: 12.19 }
+                { key: "ABC", description: "Bill Code Group Total", hours: 6.77 }
             ],
-            total: 12.19
+            total: 6.77
         }
     }
 }
 ,
 {
     employee: "Melvin Ray Herr",
-    day: "2016-5-26",
+    day: "2016-6-3",
     clockPunches: [
-        { time: "01:49:46 AM", type: "f", hours: 0.48, billCode: "U", description: ".967140 *IP* (ABC) Upgrade to Version 15" },
-        { time: "02:18:26 AM", type: "f", hours: 0.18, billCode: "M", description: "* Misc. Time" },
-        { time: "02:29:08 AM", type: "f", hours: 7.11, billCode: "D", description: "* Done Working" },
-        { time: "09:35:35 AM", type: "f", hours: 2.63, billCode: "M", description: "* Misc. Time" },
-        { time: "09:43:30 AM", type: "p", hours: 0.43, billCode: "G", description: "* (KR) Karen Rissler" },
-        { time: "12:38:56 PM", type: "f", hours: 0.47, billCode: "F", description: "* Food/Fellowship" },
-        { time: "01:07:18 PM", type: "f", hours: 0.24, billCode: "M", description: "* Misc. Time" },
-        { time: "01:08:12 PM", type: "p", hours: 0.40, billCode: "G", description: "* (AW) Anthony Witmer" },
-        { time: "01:45:24 PM", type: "f", hours: 0.96, billCode: "V", description: "* (.DV000001) Program Merge" },
-        { time: "01:51:45 PM", type: "p", hours: 0.08, billCode: "G", description: "* (AW) Anthony Witmer" },
-        { time: "02:12:52 PM", type: "p", hours: 0.13, billCode: "G", description: "* (AW) Anthony Witmer" },
-        { time: "02:55:46 PM", type: "f", hours: 0.06, billCode: "M", description: "* Misc. Time" },
-        { time: "02:59:07 PM", type: "f", hours: 0.58, billCode: "V", description: "* (.DV000001) Program Merge" },
-        { time: "03:34:00 PM", type: "f", hours: 0.60, billCode: "M", description: "* Misc. Time" },
-        { time: "04:10:00 PM", type: "f", hours: 17.00, billCode: "D", description: "* Done Working" }
+        { time: "09:44:48 AM", type: "f", hours: 0.60, billCode: "M", description: "* Misc. Time" },
+        { time: "09:52:49 AM", type: "p", hours: 0.51, billCode: "G", description: "* (KREROM0) ROBERT M KREIDER" },
+        { time: "10:32:46 AM", type: "p", hours: 0.53, billCode: "G", description: "* (NK) Norman King" },
+        { time: "11:06:51 AM", type: "p", hours: 0.14, billCode: "N", description: ".968509 Help with W_UT_CHANGE report to update customer print codes." },
+        { time: "11:30:48 AM", type: "f", hours: 0.39, billCode: "V", description: "* (.DV724000) Client 4 Fixes" },
+        { time: "11:54:02 AM", type: "f", hours: 0.21, billCode: "M", description: "* Misc. Time" },
+        { time: "12:02:59 PM", type: "p", hours: 0.44, billCode: "N", description: ".968510 Upgrade client to newer version to make F11 work reliably." },
+        { time: "12:33:08 PM", type: "f", hours: 0.67, billCode: "F", description: "* Food/Fellowship" },
+        { time: "01:13:18 PM", type: "f", hours: 0.85, billCode: "M", description: "* Misc. Time" },
+        { time: "01:20:52 PM", type: "p", hours: 2.91, billCode: "V", description: "* (.DV910000) Meetings/Conf Calls" },
+        { time: "04:51:35 PM", type: "p", hours: 0.00, billCode: "V", description: "* (.DV725000) Client 5 Fixes" },
+        { time: "04:51:46 PM", type: "p", hours: 0.08, billCode: "V", description: "* (.DV725000) Client 5 Fixes" },
+        { time: "05:03:10 PM", type: "f", hours: 26.03, billCode: "D", description: "* Done Working" }
     ],
     billCodeTotals: {
         byBillCode: {
             details: [
-                { key: "F", description: "Food/Fellowship", hours: 0.47 },
+                { key: "F", description: "Food/Fellowship", hours: 0.67 },
                 { key: "G", description: "Give/Get Co-Worker Help", hours: 1.04 },
-                { key: "M", description: "Misc. Time", hours: 3.71 },
-                { key: "U", description: "Inhouse Development", hours: 0.48 },
-                { key: "V", description: "Development Time", hours: 1.54 }
+                { key: "M", description: "Misc. Time", hours: 1.66 },
+                { key: "N", description: "Billable Time", hours: 0.58 },
+                { key: "V", description: "Development Time", hours: 3.38 }
             ],
-            total: 7.24
+            total: 7.33
         },
         byGroup: {
             details: [
-                { key: "ABC", description: "Bill Code Group Total", hours: 7.24 }
+                { key: "ABC", description: "Bill Code Group Total", hours: 7.33 }
             ],
-            total: 7.24
+            total: 7.33
         }
     }
 }
 ,
 {
     employee: "Melvin Ray Herr",
-    day: "2016-5-27",
+    day: "2016-6-4",
     clockPunches: [
-        { time: "09:09:44 AM", type: "f", hours: 0.58, billCode: "M", description: "* Misc. Time" },
-        { time: "09:28:27 AM", type: "p", hours: 0.02, billCode: "G", description: "* Give/Get Co-Worker Help" },
-        { time: "09:40:47 AM", type: "p", hours: 0.34, billCode: "G", description: "* (AW) Anthony Witmer" },
-        { time: "10:06:08 AM", type: "f", hours: 0.59, billCode: "U", description: "* (ABCTIT0) ABC Time Tracking and Reports" },
-        { time: "10:41:04 AM", type: "p", hours: 0.49, billCode: "P", description: ".967457 *IP* (EMYLL 0) Centralized server control system." },
-        { time: "11:11:05 AM", type: "f", hours: 0.19, billCode: "M", description: "* Misc. Time" },
-        { time: "11:22:09 AM", type: "f", hours: 0.87, billCode: "U", description: "* (ABCTIT0) ABC Time Tracking and Reports" },
-        { time: "12:14:32 PM", type: "f", hours: 0.21, billCode: "V", description: "* (.DV030000) Report Generator Fixes/Printing" },
-        { time: "12:27:20 PM", type: "f", hours: 0.27, billCode: "F", description: "* Food/Fellowship" },
-        { time: "12:43:21 PM", type: "f", hours: 1.32, billCode: "V", description: "* (.DV030000) Report Generator Fixes/Printing" },
-        { time: "02:02:45 PM", type: "f", hours: 3.70, billCode: "V", description: "* (.DV725000) Client 5 Fixes" },
-        { time: "04:54:34 PM", type: "p", hours: 0.01, billCode: "M", description: "* (AW) Anthony Witmer" },
-        { time: "05:45:08 PM", type: "f", hours: 0.10, billCode: "M", description: "* Misc. Time" },
-        { time: "05:51:09 PM", type: "f", hours: 60.43, billCode: "D", description: "* Done Working" }
+        { time: "07:04:39 PM", type: "f", hours: 0.06, billCode: "M", description: "* Misc. Time" },
+        { time: "07:08:02 PM", type: "f", hours: 38.03, billCode: "D", description: "* Done Working" }
 
 
     ],
     billCodeTotals: {
         byBillCode: {
             details: [
-                { key: "F", description: "Food/Fellowship", hours: 0.27 },
-                { key: "G", description: "Give/Get Co-Worker Help", hours: 0.36 },
-                { key: "M", description: "Misc. Time", hours: 0.88 },
-                { key: "P", description: "Custom Programming", hours: 0.49 },
-                { key: "U", description: "Inhouse Development", hours: 1.46 },
-                { key: "V", description: "Development Time", hours: 5.23 }
+                { key: "M", description: "Misc. Time", hours: 0.06 }
             ],
-            total: 8.69
+            total: 0.06
         },
         byGroup: {
             details: [
-                { key: "ABC", description: "Bill Code Group Total", hours: 8.69 }
+                { key: "ABC", description: "Bill Code Group Total", hours: 0.06 }
             ],
-            total: 8.69
+            total: 0.06
         }
     }
 }
@@ -190,27 +165,23 @@ var grandTotals = {
     billCodeTotals: {
         byBillCode: {
             details: [
-                { key: "C", description: "Commission", hours: 3.31 },
-                { key: "F", description: "Food/Fellowship", hours: 0.74 },
-                { key: "G", description: "Give/Get Co-Worker Help", hours: 1.69 },
-                { key: "M", description: "Misc. Time", hours: 7.61 },
-                { key: "N", description: "Billable Time", hours: 0.74 },
-                { key: "P", description: "Custom Programming", hours: 7.26 },
-                { key: "U", description: "Inhouse Development", hours: 2.41 },
-                { key: "V", description: "Development Time", hours: 13.43 }
+                { key: "F", description: "Food/Fellowship", hours: 0.67 },
+                { key: "G", description: "Give/Get Co-Worker Help", hours: 1.09 },
+                { key: "M", description: "Misc. Time", hours: 4.56 },
+                { key: "N", description: "Billable Time", hours: 0.58 },
+                { key: "P", description: "Custom Programming", hours: 15.12 },
+                { key: "V", description: "Development Time", hours: 10.88 }
             ],
-            total: 37.19
+            total: 32.90
         },
         byGroup: {
             details: [
-                { key: "ABC", description: "Bill Code Group Total", hours: 37.19 }
+                { key: "ABC", description: "Bill Code Group Total", hours: 32.90 }
             ],
-            total: 37.19
+            total: 32.90
         }
     }
 }
-
-
 </script>
 
     <meta charset="utf-8">
